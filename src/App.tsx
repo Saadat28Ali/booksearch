@@ -6,9 +6,9 @@ import ShowcaseArea from './components/showcasearea.tsx';
 
 function App() {
 
-  const [bookData, setBookData] = useState([]);
-  const [currPage, setCurrPage] = useState(0);
-  const refToShowcase = useRef(null);
+  const [bookData, setBookData] = useState<Array<string>>([]);
+  const [currPage, ] = useState(0);
+  const refToShowcase = useRef<any | HTMLElement>(null);
 
   function scrollToShowcase(): void {
     // alert(refToShowcase.current);
@@ -31,7 +31,7 @@ function App() {
       <SearchArea bookDataSetter={setBookData} scrollFunc={scrollToShowcase} currPageOffset={currPage}/>
       <a id="showcasearea"></a>
       {/* {(bookData.length === 0) ? (<></>) : (<ShowcaseArea data={bookData} ref={refToShowcase} />)} */}
-      <ShowcaseArea data={bookData} ref={refToShowcase} pageGetterSetter={{pageGetter: currPage, pageSetter: setCurrPage}}/>
+      <ShowcaseArea data={bookData} ref={refToShowcase} />
       <Footer />
     </div>
   );

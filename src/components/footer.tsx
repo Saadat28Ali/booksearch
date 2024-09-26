@@ -1,4 +1,4 @@
-function Footer(props: object): any {
+function Footer(): any {
     return(
         <div className="Footer bg-gradient-to-b from-white to-neutral-300 flex flex-col font-mono items-center justify-center min-h-[50vh] text-slate-900 tracking-widest w-screen ">
             {/* <div>

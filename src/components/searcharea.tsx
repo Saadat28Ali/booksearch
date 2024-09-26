@@ -3,7 +3,7 @@ import Spinner from "./spinner.tsx";
 
 import axios from "axios";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 function SearchArea({ bookDataSetter, scrollFunc, currPageOffset }: {bookDataSetter: Function, scrollFunc: Function, currPageOffset: any}): any {
 
@@ -63,7 +63,7 @@ function SearchArea({ bookDataSetter, scrollFunc, currPageOffset }: {bookDataSet
     return(
         <div className="SearchArea bg-gradient-to-br from-blue-700 to-blue-950 flex flex-col items-center justify-center w-screen min-h-screen text-white ">
             <h1 className="SearchArea_Header leading-loose text-2xl tracking-tighter"> Search for a book! </h1>
-            <SearchBar fetchingSetter={setFetching} searchFunc={fetchData}/>
+            <SearchBar searchFunc={fetchData}/>
             <Spinner fetchingStatus={fetching}/>
         </div>
     );
